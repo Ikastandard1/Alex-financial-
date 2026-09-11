@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Apex Market Intelligence — real-time market analysis, data-driven forecasts and institutional-grade insights.">
+  <title>Apex Market Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/lightweight-charts@5.0.8/dist/lightweight-charts.standalone.production.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#">
+      <span class="brand-mark">A</span>
+      <span><strong>APEX</strong><small>MARKET INTELLIGENCE</small></span>
+    </a>
+    <nav class="desktop-nav">
+      <a class="active" href="#home">Home</a><a href="#markets">Markets</a><a href="#services">Services</a>
+      <a href="#how">How It Works</a><a href="#about">About</a><a href="#contact">Contact</a>
+      <a class="nav-cta" href="#contact">Get Market Insights</a>
+    </nav>
+    <button class="menu-btn" aria-label="Open menu">☰</button>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">APEX MARKET INTELLIGENCE</p>
+        <h1>Real-Time Analysis.<br>Data-Driven Forecasts.<br><span>Better Decisions.</span></h1>
+        <p class="hero-text">We provide real-time market analysis and data-driven forecasts for USOIL, S&amp;P 500, and other major markets.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#markets">Explore Market Analysis</a>
+          <a class="btn ghost" href="#how">Our Approach</a>
+        </div>
+        <div class="trust">◈ <span>Trusted by traders, investors and institutions worldwide</span></div>
+      </div>
+
+      <div class="hero-chart-wrap">
+        <div class="market-strip">
+          <div><small>USOIL</small><b id="oilPrice">$78.64</b><em id="oilChange">-0.56%</em></div>
+          <div><small>S&amp;P 500</small><b id="spPrice">5,289.47</b><em class="positive" id="spChange">+0.74%</em></div>
+          <div class="sentiment"><small>Market Sentiment</small><b id="sentiment">Bullish</b><span class="gauge"><i></i></span></div>
+        </div>
+        <div id="chart"></div>
+        <div class="chart-status"><span class="live-dot"></span><span id="feedStatus">LIVE SIMULATION</span></div>
+      </div>
+    </section>
+
+    <section class="light-section" id="services">
+      <div class="section-title">WHAT WE DO</div>
+      <div class="cards three">
+        <article class="info-card"><span class="icon">↗</span><div><h3>Real-Time Analysis</h3><p>Live market data and price action analysis across global markets.</p></div></article>
+        <article class="info-card"><span class="icon">◎</span><div><h3>Market Forecasting</h3><p>Data-driven forecasts and scenario analysis to anticipate market moves.</p></div></article>
+        <article class="info-card"><span class="icon">▥</span><div><h3>Market Intelligence</h3><p>Institutional-grade insights on trends, volatility, and market sentiment.</p></div></article>
+      </div>
+    </section>
+
+    <section class="light-section" id="how">
+      <div class="section-title">HOW IT WORKS</div>
+      <div class="process">
+        <article><span>01</span><b>◉</b><h3>Collect</h3><p>We gather real-time market data from multiple reliable sources.</p></article>
+        <i>→</i>
+        <article><span>02</span><b>⌕</b><h3>Analyze</h3><p>We analyze price action, trends, volatility and market structure.</p></article>
+        <i>→</i>
+        <article><span>03</span><b>⌁</b><h3>Forecast</h3><p>We develop probabilistic forecasts and scenario-based outlooks.</p></article>
+        <i>→</i>
+        <article><span>04</span><b>➤</b><h3>Deliver</h3><p>We deliver clear insights to help you make smarter decisions.</p></article>
+      </div>
+    </section>
+
+    <section class="light-section" id="markets">
+      <div class="section-title">MARKETS WE ANALYZE</div>
+      <div class="market-grid">
+        <article class="market-card"><span>◉</span><div><small>USOIL</small><b id="cardOil">$78.64</b><em id="cardOilChange">-0.56%</em></div><canvas id="miniOil"></canvas></article>
+        <article class="market-card"><span>✣</span><div><small>S&amp;P 500</small><b id="cardSp">5,289.47</b><em class="positive" id="cardSpChange">+0.74%</em></div><canvas id="miniSp"></canvas></article>
+        <article class="market-card"><span>◎</span><div><small>NASDAQ 100</small><b>18,742.35</b><em class="positive">+0.58%</em></div><canvas class="mini" data-dir="up"></canvas></article>
+        <article class="market-card"><span>▱</span><div><small>GOLD</small><b>2,354.21</b><em class="positive">+0.35%</em></div><canvas class="mini" data-dir="up"></canvas></article>
+        <article class="market-card"><span>◉</span><div><small>FOREX</small><b>Major Pairs</b><em class="positive">Live Analysis</em></div><canvas class="mini" data-dir="up"></canvas></article>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div><h2>Ready to Make<br>Smarter Decisions?</h2><p>Subscribe to our market insights and get real-time analysis straight to your inbox.</p></div>
+      <form onsubmit="return false;"><input type="email" placeholder="Enter your email" aria-label="Email"><button class="btn primary">Get Market Insights</button></form>
+    </section>
+  </main>
+
+  <footer id="about">
+    <div class="footer-main">
+      <div class="footer-brand"><a class="brand" href="#"><span class="brand-mark">A</span><span><strong>APEX</strong><small>MARKET INTELLIGENCE</small></span></a><p>Real-time market analysis, data-driven forecasts, and institutional-grade insights.</p><div class="social">in &nbsp; 𝕏 &nbsp; ▶</div></div>
+      <div><h4>Markets</h4><a>USOIL</a><a>S&amp;P 500</a><a>Indices</a><a>Commodities</a><a>Forex</a></div>
+      <div><h4>Services</h4><a>Daily Briefing</a><a>Custom Forecasts</a><a>Risk Management</a><a>Strategy Sessions</a></div>
+      <div><h4>Company</h4><a>About</a><a>How It Works</a><a>Contact</a></div>
+      <div><h4>Legal</h4><a>Terms of Service</a><a>Privacy Policy</a><a>Disclaimer</a></div>
+      <div><h4>Subscribe to Insights</h4><p>Get the latest market insights and analysis straight to your inbox.</p><input type="email" placeholder="Enter your email"><button class="subscribe">→</button></div>
+    </div>
+    <div class="footer-bottom"><span>© 2024 Apex Market Intelligence. All rights reserved.</span><span>Market analysis is for informational purposes only and not financial advice.</span></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
